@@ -3,6 +3,15 @@ const express = require("express");
 const exphbs = require("express-handlebars");
 const router = require("./routes/index");
 const path = require("path");
+const mongoose = require("mongoose");
+require("./config/db");
+const cookieParser = require("cookie-parser");
+const session = require("express-session");
+const MongoStore = require("connect-mongo")(session);
+
+// HABILITANDO EL ARCHIVO DE LAS VARIABLES DE ENTORNO
+require("dotenv").config({ path: "variables.env" });
+
 
 const app = express();
 
