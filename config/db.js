@@ -10,3 +10,6 @@ mongoose.connect(process.env.DATABASE, {
 mongoose.connection.on("error", error => {
   console.log(error);
 });
+
+// IMPORTANDO LOS MODELOS
+require("../models/Ingresos");
