@@ -10,6 +10,8 @@
     {{!-- Hoja de estilos personalizada  --}}
     <link rel="stylesheet" href="/css/app.css">
     <title>{{nombrePagina}}</title>
+    {{!-- Hoja de estilos para trix (WYSIWYG) --}}
+    <link rel="stylesheet" href="/css/trix.css">
 </head>
 
 <body>
@@ -36,10 +38,14 @@
         {{/if}}
 
         {{#if boton}}
-        <a href="/ingreso/nueva" class="btn btn-azul">Ir al dashboard</a>
+        <a href="/" class="btn btn-azul">Ir al dashboard</a>
         {{/if}}
     </header>
        </section>
+    </div>
+
+    <div class="wrapper">
+        {{{body}}}
     </div>
 
 <!-- Footer -->
@@ -57,7 +63,9 @@
                 </ul>
             </div>
 	    </div> 
-	</div>   
+	</div> 
+    {{!-- Script para trix (WYSIWGY) --}}
+    <script src="/js/trix.js"></script>  
 </body>
 
 </html>

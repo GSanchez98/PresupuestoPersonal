@@ -1,29 +1,42 @@
-<main class="contenedor">
-    <form action="/ingreso/nuevoIngreso" method="post" class="default-form">
-        <h3>Ingreso de datos</h3>
-
-        <div class="campo">
-            <label for="descripcion">Descripción</label>
-            <input type="text" name="descripcion" placeholder="Trabajo, Alquiler, Ventas...">
-        </div>
-
-        <div class="campo">
-            <label for="montoPresupuestado">Monto Presupuestado</label>
-            <input type="text" name="montoPresupuestado" placeholder="L. 1200">
-        </div>
-
-        <div class="campo">
-            <label for="montoReal">Monto Real</label>
-            <input type="text" name="montoReal" placeholder="L. 1200">
-        </div>
-
-        <h3>Descripción del puesto</h3>
-        <div class="campo descripcion">
-            {{!-- Implementar un WYSIWYG --}}
-            <label>Descripción</label>
-            <input type="hidden" name="descripcion" id="x">
-            <trix-editor input="x"></trix-editor>
-        </div>
-
-    </form>
-</main>
+<!-- CONTENIDO PRINCIPAL DEL NUEVO INGRESO -->
+	<div class="container" id="main">
+		<!-- CONTENIDO -->
+			<article id="content">
+				<header>
+					<h2>NUEVO REGISTRO</h2>
+                        <div class="row">
+							<section class="col-6 col-6-narrower">
+								<form method="post" action="#">
+									<div class="row gtr-50">
+										<div class="col-12">
+											<input name="descripcion" placeholder="Descripción del ingreso" type="text" />
+										</div>
+										<div class="col-12">
+											<input name="mpresupuestado" placeholder="Monto Presupuestado" type="text" />
+										</div>
+										<div class="col-12">
+											<input name="mreal" placeholder="Monto Real" type="text"></input>
+										</div>
+										<div class="col-12">
+											<ul class="actions">
+												<li><input type="submit" value="Guardar ingreso" /></li>
+												<li><input type="reset" value="Cancelar" /></li>
+											</ul>
+										</div>
+									</div>
+								</form>
+							</section> 
+                            <section class="col-6 col-12-narrower feature">
+                                <div class="image-wrapper">
+                                	<a href="#" class="image featured">
+                                        <img src="../public/css/images/ingresos.png" alt="ingresos.png">
+                                    </a>
+                                </div>
+                            
+                            </section>  
+                        </div>
+				</header>
+			</article>
+	</div>
+       
+									
