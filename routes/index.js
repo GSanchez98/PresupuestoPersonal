@@ -7,6 +7,7 @@ const gastosController = require("../controllers/gastosController");
 const ahorrosController = require("../controllers/ahorrosController");
 const prestamosController = require("../controllers/prestamosController");
 const tarjetasController = require("../controllers/tarjetasController");
+const usuariosController = require("../controllers/usuariosController");
 
 module.exports = () => {
   router.get("/", homeController.mostrarIngresos);
@@ -15,7 +16,7 @@ module.exports = () => {
   router.get("/ahorro/nuevoAhorro", ahorrosController.formularioNuevoAhorro);
   router.get("/prestamo/nuevoPrestamo", prestamosController.formularioNuevoPrestamo);
   router.get("/tarjeta/nuevaTarjeta", tarjetasController.formularioNuevaTarjeta);
-
+  router.get("/usuario/nuevoUsuario", usuariosController.formularioNuevoUsuario);
 
   return router;
 };
